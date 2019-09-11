@@ -102,7 +102,9 @@
 	
 	<script>
 			
-			
+		window.addEventListener('mousemove', this.mouseMoveHandler, false);
+		window.addEventListener('touchmove', this.mouseMoveHandler, false);
+
 		var isTouchEnabled = window.Touch || false;
 		window.addEventListener(isTouchEnabled ? 'touchmove' : 'mousemove', this.mouseMoveHandler, false);
 
