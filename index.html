@@ -102,14 +102,9 @@
 	
 	<script>
 			
-			// ONlY FOR MOBILE TOUCH EVENTS
-			document.querySelector('p').addEventListener('touchstart', f);
-			document.querySelector('p').addEventListener('touchend', f);
-			document.querySelector('p').addEventListener('touchmove', f);
-
-			function f(ev) {
-				console.log( ev.touches, ev.type );
-			}
+			
+		var isTouchEnabled = window.Touch || false;
+		window.addEventListener(isTouchEnabled ? 'touchmove' : 'mousemove', this.mouseMoveHandler, false);
 
 
 	</script>
