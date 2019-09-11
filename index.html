@@ -103,14 +103,9 @@
 	</div>
 	
 	<script>
-			
-		window.addEventListener('mousemove', this.mouseMoveHandler, false);
-		window.addEventListener('touchmove', this.mouseMoveHandler, false);
-
-		var isTouchEnabled = window.Touch || false;
-		window.addEventListener(isTouchEnabled ? 'touchmove' : 'mousemove', this.mouseMoveHandler, false);
-
-
+		function addListenerMulti(el, s, fn) {
+ 		 s.split(' ').forEach(e => el.addEventListener(e, fn, false));
+		}
 	</script>
 
 	<script src='game.js'></script>
