@@ -149,7 +149,7 @@ startGame();
 document.onkeyup = function(event) {
   letterGuessed = String.fromCharCode(event.keyCode).toLowerCase(); // converts all key clicks to lowercase letters
   
-  ['mousemove', 'touchmove'].forEach(function(event) { window.addEventListener(event, handler);});  
+
 
   checkLetters(letterGuessed); // runs the code to check for correctness 
   roundComplete(); // runs the code after each round is done
